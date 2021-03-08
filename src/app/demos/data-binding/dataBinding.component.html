@@ -1,18 +1,38 @@
 
 <section class="interpolation-section section-padding section-dark">
 <div class="container main-container">
-    <h3>Interpolation - aula parada em 06:30</h3>
 
+    <h1>Exemplos Data binding</h1>
+
+    <!--Exemplo de Interpolation utilizando {{variavel dentro}}-->
+    <h3>Interpolation</h3>
+    
     <p>O numero de cliques é: {{ contadorClique}}</p>
 
     <br>
-    <br>
 
+    <!--Exemplo de property binding utilizando [] para controlar uma propriedade, nesse caso o disbled-->
     <h3>Property binding</h3>
     <button class="btn btn-primary bg-dark" [disabled]="contadorClique >= 10">info</button>
     <br>
     <br>
 
+    <!-- Recebendo na prop src o valor da var urlImagem para carrega-la -->
     <img [src]="urlImagem" height="50px" width="50px"/>
+
+    <br><br>
+
+    <!--Exemplo de property binding utilizando () para controlar um evento, chamando o metodo do componente-->
+    <h3>Event Binding</h3>
+    <button class="btn btn-primary bg-dark" (click)="adicionarContador()">add</button>
+    <button class="btn btn-primary bg-dark" [disabled]="contadorClique < 10"  (click)="zerarContador()">zerar</button>
+    <br>
+    <br>
+
+    <!--Exemplo de two-way binding, utilizando dessa forma [()] foi declarado uma ngModel, além receber o valor ela tbm altera o valor de "nome"-->
+    <h3>Two-way binding</h3>
+    <input type="text" [(ngModel)]="nome" placeholder="Digite seu nome">
+    <br>
+    <label class="{{ nome }}">Seu nome é: {{nome}}</label>
 </div>
 </section>  
