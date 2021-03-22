@@ -3,7 +3,7 @@
         <div class="row" style="padding: 90px;">
             <div class="col-md-6 configdiv" style="text-align:center" >
                 <img src="/assets/{{produtoDetalhes.imagem}}" />
-                <h5>Nome: {{produtoDetalhes.nome}}</h5>
+                <h5>Nome: {{produtoDetalhes.nome | titlecase}}</h5>
                 <p>valor: R$ {{produtoDetalhes.valor}}</p>
                 <p>Descrição: {{produtoDetalhes.detalhe}}</p>
             </div>
